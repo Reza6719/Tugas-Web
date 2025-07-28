@@ -1,0 +1,260 @@
+/* style.css */
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffe6f0;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header dan navigasi */
+header {
+  background: #ff66b2;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(255, 102, 178, 0.4);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animasi */
+nav a::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background: white;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #ffe6f0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Section styling */
+section {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 102, 178, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading */
+section h2 {
+  color: #ff3385;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  position: relative;
+  text-align: center;
+}
+
+/* Underline efek pada heading */
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff66b2;
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #ff66b2aa;
+}
+
+/* Paragraf */
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Table biodata */
+.biodata-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.biodata-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ffbbe0;
+}
+
+.biodata-table tr:nth-child(even) {
+  background: #ffe6f5;
+}
+
+/* List Hobi */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+ul li {
+  background: #ffb3d1;
+  margin: 0.7rem 0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #66002c;
+  box-shadow: 0 2px 5px rgba(255, 102, 178, 0.3);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+ul li:hover {
+  transform: scale(1.05);
+  background: #ff66b2;
+  color: white;
+}
+
+/* Foto */
+#foto img {
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  margin: 1.5rem auto 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(255, 102, 178, 0.4);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+#foto img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 12px 30px rgba(255, 102, 178, 0.7);
+}
+
+/* Sosial Media */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-box {
+  background: #ff66b2;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(255, 102, 178, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.social-box i {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  filter: drop-shadow(0 1px 2px #aa0066);
+}
+
+.social-box p {
+  font-weight: 600;
+  font-size: 1rem;
+  word-break: break-word;
+  text-align: center;
+}
+
+.social-box:hover {
+  background: #ff3385;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 51, 133, 0.7);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #ff66b2;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 -4px 8px rgba(255, 102, 178, 0.6);
+  margin-top: 4rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Animations with AOS integration + custom animation fallback */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 0.8s;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  section {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .social-box {
+    width: 100px;
+    padding: 0.8rem 1rem;
+  }
+
+  ul {
+    max-width: 100%;
+  }
+}
