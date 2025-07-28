@@ -1,6 +1,4 @@
-/* style.css */
 
-/* Reset dasar */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +13,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Header dan navigasi */
 header {
   background: #ff66b2;
   padding: 1rem 2rem;
@@ -40,7 +37,6 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Hover underline animasi */
 nav a::after {
   content: '';
   display: block;
@@ -62,7 +58,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Section styling */
 section {
   max-width: 900px;
   margin: 3rem auto;
@@ -74,7 +69,6 @@ section {
   overflow: hidden;
 }
 
-/* Heading */
 section h2 {
   color: #ff3385;
   font-weight: 700;
@@ -85,7 +79,6 @@ section h2 {
   text-align: center;
 }
 
-/* Underline efek pada heading */
 section h2::after {
   content: '';
   display: block;
@@ -97,14 +90,12 @@ section h2::after {
   box-shadow: 0 0 8px #ff66b2aa;
 }
 
-/* Paragraf */
 section p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-/* Table biodata */
 .biodata-table {
   width: 100%;
   border-collapse: collapse;
@@ -121,7 +112,6 @@ section p {
   background: #ffe6f5;
 }
 
-/* List Hobi */
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -147,7 +137,6 @@ ul li:hover {
   color: white;
 }
 
-/* Foto */
 #foto img {
   display: block;
   max-width: 250px;
@@ -164,7 +153,6 @@ ul li:hover {
   box-shadow: 0 12px 30px rgba(255, 102, 178, 0.7);
 }
 
-/* Sosial Media */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -205,7 +193,6 @@ ul li:hover {
   box-shadow: 0 12px 25px rgba(255, 51, 133, 0.7);
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -218,7 +205,6 @@ footer {
   letter-spacing: 1px;
 }
 
-/* Animations with AOS integration + custom animation fallback */
 [data-aos] {
   opacity: 0;
   transform: translateY(20px);
@@ -232,7 +218,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   nav {
     flex-wrap: wrap;
